@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Login Layout</string>
+    <string name="image_description">Image Description</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="street_workout">Street Workout</string>
+    <string name="intro_image">Intro Image</string>
+    <string name="sign_in_your_account">Sign In Your Account</string>
+</resources>
