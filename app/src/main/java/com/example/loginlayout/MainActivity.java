@@ -1,6 +1,7 @@
 package com.example.loginlayout;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Facebook Value
     private CallbackManager mCallbackManager;
-    private CallbackManager callbackManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
         // Config Intro
         SetupIntro();
 
+        // Google Setup
+        mAuth = FirebaseAuth.getInstance();
+
+        // Facebook Setup
+        mCallbackManager = CallbackManager.Factory.create();
         // Setup Login
         SetupGoogleLogin();
         SetupFacebookLogin();
@@ -61,6 +67,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        mCallbackManager.onActivityResult(requestCode, resultCode, data);
+    }
 
     void SetupIntro(){
         // Initialize Viewpager2
@@ -74,11 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
         dotsIndicator.setViewPager2(introView);
 
-        // Google Setup
-        mAuth = FirebaseAuth.getInstance();
 
-        // Facebook Setup
-        callbackManager = CallbackManager.Factory.create();
     }
 
     // Login Facebook
@@ -99,10 +106,12 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onCancel() {
+                // ...
             }
 
             @Override
             public void onError(FacebookException error) {
+                // ...
             }
         });
     }

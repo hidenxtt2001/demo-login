@@ -6,4 +6,6 @@
     <string name="street_workout">Street Workout</string>
     <string name="intro_image">Intro Image</string>
     <string name="sign_in_your_account">Sign In Your Account</string>
+    <string name="facebook_app_id">147810033910037</string>
+    <string name="fb_login_protocol_scheme">fb000000000000</string>
 </resources>
