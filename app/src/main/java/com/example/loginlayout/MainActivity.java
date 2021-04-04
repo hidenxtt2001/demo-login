@@ -1,3 +1,4 @@
+
 package com.example.loginlayout;
 
 import androidx.annotation.NonNull;
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     int [] images = {R.drawable.wolf_icon_white,R.drawable.wolf_icon_white,R.drawable.wolf_icon_white};
     IntroAddapter introAddapter;
     private FirebaseAuth mAuth;
+
+    // This is what you need
 
     // Google Value
     private GoogleSignInClient mGoogleSignInClient;
