@@ -84,11 +84,9 @@ public class MainActivity extends AppCompatActivity {
         introView.setAdapter(introAddapter);
 
         dotsIndicator.setViewPager2(introView);
-
-
     }
 
-    // Login Facebook
+    //region Facebook Login
     public void LoginFacebook_Click(View view) {
         LoginButton loginButton =findViewById(R.id.loginFacebookReal);
         loginButton.performClick();
@@ -132,8 +130,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
-
-    // Login Gmail
+    //endregion
+    //region Login Gmail
     public void LoginGmail_Click(View view) {
         mGoogleSignInClient.signOut();
         mGoogleSignInClient.revokeAccess();
@@ -166,4 +164,5 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+    //endregion
 }
