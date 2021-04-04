@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     IntroAddapter introAddapter;
     private FirebaseAuth mAuth;
 
-    // This is what you need
+    // This is what you do
 
     // Google Value
     private GoogleSignInClient mGoogleSignInClient;
